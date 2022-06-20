@@ -109,7 +109,10 @@ class RatPlugin implements Plugin<Project> {
       rat
     }
     project.repositories {
-      mavenCentral()
+//      mavenCentral()
+      maven {
+        url "https://maven.aliyun.com/repository/gradle-plugin/"
+      }
     }
     project.dependencies {
       rat 'org.apache.rat:apache-rat-tasks:0.13'
